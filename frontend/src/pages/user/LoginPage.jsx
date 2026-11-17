@@ -67,57 +67,57 @@ const LoginPage = () => {
   };
 
   return (
-    <div style={{ padding: '4rem 0 6rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ maxWidth: '440px', width: '100%', margin: '0 auto', padding: '0 1.25rem' }}>
+    <div style={{ padding: '4.5rem 0 6.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ maxWidth: '450px', width: '100%', margin: '0 auto', padding: '0 1.25rem' }}>
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-lg)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '2.5rem',
           boxShadow: 'var(--shadow-md)'
         }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <div className="brand-icon" style={{ margin: '0 auto 1rem', width: '3rem', height: '3rem' }}>
-              <BookOpen size={24} />
+            <div className="brand-icon" style={{ margin: '0 auto 1rem', width: '3.2rem', height: '3.2rem' }}>
+              <BookOpen size={26} />
             </div>
-            <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
-              Masuk ke BookSpace
+            <h1 style={{ fontSize: '1.85rem', fontWeight: 800, color: 'var(--color-forest-green)', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
+              Masuk ke SudutBaca
             </h1>
-            <p style={{ color: 'var(--color-muted)', fontSize: '0.9rem' }}>
-              Gunakan akun Anda untuk melanjutkan transaksi
+            <p style={{ color: 'var(--color-dark-brown-muted)', fontSize: '0.9rem' }}>
+              "Temukan Bacaan Favoritmu."
             </p>
           </div>
 
-          {/* Quick Demo Fill Buttons (Sangat berguna saat pengujian Asesor BNSP) */}
+          {/* Quick Demo Fill Buttons (Asesmen BNSP) */}
           <div style={{
-            padding: '0.85rem',
-            backgroundColor: 'var(--color-bg-subtle)',
+            padding: '0.9rem',
+            backgroundColor: 'var(--color-warm-cream)',
             borderRadius: 'var(--radius-md)',
-            border: '1px solid var(--color-border)',
-            marginBottom: '1.5rem',
+            border: '1px solid var(--color-soft-beige)',
+            marginBottom: '1.75rem',
             textAlign: 'center'
           }}>
-            <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-muted)', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
-              Demo Akun Cepat (BNSP Assessment)
+            <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-forest-green)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              Uji Coba Cepat (Akun Demo BNSP)
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem' }}>
               <button
                 type="button"
                 onClick={() => handleFillDemo('admin')}
                 className="btn btn-outline btn-sm"
-                style={{ fontSize: '0.8rem' }}
+                style={{ fontSize: '0.8rem', fontWeight: 700 }}
               >
-                <Shield size={14} color="var(--color-primary)" />
+                <Shield size={14} color="var(--color-forest-green)" />
                 Akun Admin
               </button>
               <button
                 type="button"
                 onClick={() => handleFillDemo('user')}
                 className="btn btn-outline btn-sm"
-                style={{ fontSize: '0.8rem' }}
+                style={{ fontSize: '0.8rem', fontWeight: 700 }}
               >
-                <User size={14} color="var(--color-success)" />
+                <User size={14} color="var(--color-sage-green)" />
                 Akun Customer
               </button>
             </div>
@@ -171,17 +171,17 @@ const LoginPage = () => {
               type="submit"
               disabled={loading}
               className="btn btn-primary btn-lg"
-              style={{ width: '100%', marginTop: '0.75rem' }}
+              style={{ width: '100%', marginTop: '0.85rem' }}
             >
               <LogIn size={18} />
-              {loading ? 'Memeriksa Kredensial...' : 'Masuk Sekarang'}
+              {loading ? 'Memeriksa...' : 'Masuk Sekarang'}
             </button>
           </form>
 
-          <div style={{ textAlign: 'center', marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--color-border)', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
+          <div style={{ textAlign: 'center', marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--color-soft-beige)', fontSize: '0.875rem', color: 'var(--color-dark-brown-muted)' }}>
             Belum punya akun?{' '}
-            <Link to="/register" style={{ fontWeight: 700, color: 'var(--color-primary)' }}>
-              Daftar Sekarang
+            <Link to="/register" style={{ fontWeight: 700, color: 'var(--color-forest-green)' }}>
+              Daftar di SudutBaca
             </Link>
           </div>
         </div>

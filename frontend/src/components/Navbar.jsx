@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { BookOpen, ShoppingBag, User, LogOut, LayoutDashboard, Package } from 'lucide-react';
+import { BookOpen, ShoppingBag, LogOut, LayoutDashboard, Package } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
@@ -17,15 +17,20 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="container navbar-inner">
-        {/* Brand Logo */}
-        <Link to="/" className="brand-logo">
+        {/* Brand Logo & Name SudutBaca */}
+        <Link to="/" className="brand-logo" title="SudutBaca – Temukan Bacaan Favoritmu">
           <div className="brand-icon">
             <BookOpen size={20} />
           </div>
-          <span>BookSpace</span>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span style={{ lineHeight: '1.1' }}>SudutBaca</span>
+            <span style={{ fontSize: '0.675rem', fontWeight: 600, color: 'var(--color-sage-green)', letterSpacing: '0.02em' }}>
+              Online Bookstore
+            </span>
+          </div>
         </Link>
 
-        {/* Navigation Links */}
+        {/* Navigasi Links */}
         <nav>
           <ul className="nav-links">
             <li>
@@ -53,7 +58,7 @@ const Navbar = () => {
 
         {/* Action Buttons */}
         <div className="nav-actions">
-          {/* Shopping Cart Button (Customer only) */}
+          {/* Keranjang Belanja (Customer Only) */}
           {!isAdmin && (
             <Link to="/cart" className="cart-icon-btn" title="Keranjang Belanja">
               <ShoppingBag size={20} />
@@ -61,11 +66,11 @@ const Navbar = () => {
             </Link>
           )}
 
-          {/* User Auth Section */}
+          {/* Autentikasi Pengguna */}
           {isAuthenticated ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
               {isAdmin ? (
-                <Link to="/admin/dashboard" className="btn btn-secondary btn-sm">
+                <Link to="/admin/dashboard" className="btn btn-primary btn-sm">
                   <LayoutDashboard size={16} />
                   Dashboard Admin
                 </Link>
@@ -77,13 +82,13 @@ const Navbar = () => {
               )}
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '0.25rem' }}>
-                <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-slate)' }}>
+                <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>
                   {user.name.split(' ')[0]}
                 </span>
                 <button
                   onClick={handleLogout}
                   className="btn btn-outline btn-sm"
-                  style={{ padding: '0.4rem', border: 'none', color: 'var(--color-muted)' }}
+                  style={{ padding: '0.45rem', border: 'none', color: 'var(--color-dark-brown-muted)' }}
                   title="Keluar"
                 >
                   <LogOut size={18} />
@@ -91,7 +96,7 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
               <Link to="/login" className="btn btn-outline btn-sm">
                 Masuk
               </Link>

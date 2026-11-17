@@ -24,18 +24,18 @@ const AdminLayout = () => {
 
   return (
     <div className="admin-wrapper">
-      {/* Sidebar Admin */}
+      {/* Sidebar Admin (Forest Green #315C46) */}
       <aside className="admin-sidebar">
         <div className="admin-sidebar-header">
-          <div className="brand-icon" style={{ backgroundColor: 'var(--color-primary)' }}>
+          <div className="brand-icon" style={{ backgroundColor: '#FFFFFF', color: 'var(--color-forest-green)' }}>
             <BookOpen size={20} />
           </div>
           <div>
-            <div style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
-              BookSpace
+            <div style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.02em', color: '#FFFFFF' }}>
+              SudutBaca
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-              Admin Panel
+            <div style={{ fontSize: '0.75rem', color: '#D3E0D6', fontWeight: 600 }}>
+              Panel Administrator
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ const AdminLayout = () => {
             <span>Pesan Masuk</span>
           </NavLink>
 
-          <div style={{ margin: '1.5rem 0 0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}></div>
+          <div style={{ margin: '1.5rem 0 0.5rem', borderTop: '1px solid rgba(255,255,255,0.15)' }}></div>
 
           <Link to="/" className="admin-nav-item">
             <Store size={18} />
@@ -103,39 +103,40 @@ const AdminLayout = () => {
             style={{ background: 'none', border: 'none', width: '100%', textAlign: 'left', cursor: 'pointer' }}
           >
             <LogOut size={18} />
-            <span>Keluar</span>
+            <span>Keluar Sesi</span>
           </button>
         </nav>
       </aside>
 
-      {/* Konten Utama Admin */}
+      {/* Konten Utama Admin (Warm Cream #F8F5EC) */}
       <div className="admin-content">
         <header className="admin-topbar">
           <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-dark)' }}>
-              Panel Administrator
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
+              Panel Administrator SudutBaca
             </h2>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.95rem' }}>
             <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-dark)' }}>
+              <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>
                 {user?.name || 'Administrator'}
               </div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.25rem' }}>
-                <ShieldCheck size={12} color="var(--color-success)" /> Admin Terverifikasi
+              <div style={{ fontSize: '0.75rem', color: 'var(--color-sage-green)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.25rem', fontWeight: 600 }}>
+                <ShieldCheck size={13} color="var(--color-forest-green)" /> Admin Terverifikasi
               </div>
             </div>
             <div style={{
               width: '2.5rem',
               height: '2.5rem',
               borderRadius: 'var(--radius-full)',
-              backgroundColor: 'var(--color-primary-light)',
-              color: 'var(--color-primary)',
+              backgroundColor: 'var(--color-forest-green-light)',
+              color: 'var(--color-forest-green)',
+              border: '1px solid var(--color-soft-beige)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontWeight: 700
+              fontWeight: 800
             }}>
               {user?.name ? user.name[0].toUpperCase() : 'A'}
             </div>

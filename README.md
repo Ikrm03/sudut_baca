@@ -1,20 +1,33 @@
-# BookSpace – Online Bookstore
-> **Aplikasi Toko Buku Online Modern untuk Uji Kompetensi Sertifikasi BNSP Skema Junior Web Developer**
+# SudutBaca – Online Bookstore
+> **"Temukan Bacaan Favoritmu."**  
+> *Aplikasi Toko Buku Online Modern dengan Identitas Visual Warm Green & Cream untuk Uji Kompetensi Sertifikasi BNSP Skema Junior Web Developer*
 
-![BookSpace Banner](https://images.unsplash.com/photo-1507842229451-7f01be7fe7ab?w=1200&auto=format&fit=crop&q=80)
+![SudutBaca Banner](https://images.unsplash.com/photo-1507842229451-7f01be7fe7ab?w=1200&auto=format&fit=crop&q=80)
+
+---
+
+## 🌿 Identitas Visual & Konsep Desain (Warm Green & Cream)
+
+Website **SudutBaca** dirancang dengan konsep *Modern Minimalist, Warm, Natural, dan Elegant* yang menghadirkan suasana membaca yang tenang, ramah di mata, dan profesional:
+
+* **Warm Cream (`#F8F5EC`)**: Latar belakang utama website yang hangat dan nyaman.
+* **Forest Green (`#315C46`)**: Warna identitas utama (brand header, tombol primer, sidebar admin, footer).
+* **Sage Green (`#789477`)**: Warna sekunder untuk aksen navigasi hover, badge kategori, dan status fokus form.
+* **Soft Beige (`#E8DCC5`)**: Warna aksen pendukung dan garis batas (*border*) yang lembut.
+* **Dark Brown (`#463D32`)**: Warna tipografi utama yang mudah dibaca dengan kontras seimbang.
 
 ---
 
 ## 📌 Tentang Aplikasi
 
-**BookSpace** adalah aplikasi web toko buku online yang dirancang untuk memberikan pengalaman berbelanja buku yang modern, sederhana, dan terpercaya. Aplikasi ini memisahkan arsitektur *frontend* dan *backend* secara terstruktur (*Decoupled Client-Server Architecture*), mengadopsi autentikasi berbasis Bearer Token, dan menggunakan metode transaksi **Payment at Delivery (COD)** sesuai ketentuan Materi Uji Kompetensi (MUK) BNSP Junior Web Developer.
+**SudutBaca** adalah aplikasi web toko buku online yang dirancang untuk memberikan pengalaman berbelanja buku yang modern, sederhana, dan terpercaya. Aplikasi ini memisahkan arsitektur *frontend* dan *backend* secara terstruktur (*Decoupled Client-Server Architecture*), mengadopsi autentikasi berbasis Bearer Token, dan menggunakan metode transaksi **Payment at Delivery (COD)** sesuai ketentuan Materi Uji Kompetensi (MUK) BNSP Junior Web Developer.
 
 ---
 
 ## 🚀 Fitur Utama Aplikasi
 
 ### A. Fitur Pelanggan (Customer / User)
-1. **Beranda & Katalog Interaktif**: Tampilan buku terbaru, pengelompokan kategori pilihan, dan ringkasan keunggulan toko.
+1. **Beranda & Katalog Interaktif**: Tampilan buku terbaru, pengelompokan kategori pilihan, dan ringkasan keunggulan toko dengan tagline *"Temukan Bacaan Favoritmu."*
 2. **Pencarian Buku (Search)**: Pencarian cepat berdasarkan judul buku atau nama penulis terhubung ke backend API.
 3. **Detail Informasi Buku**: Informasi buku komprehensif (cover, harga, penulis, kategori, sinopsis, dan indikator ketersediaan stok).
 4. **Keranjang Belanja (Shopping Cart)**: Tambah item, ubah kuantitas buku (+ / -), hapus item, dengan kalkulasi subtotal dan total harga belanja real-time.
@@ -25,7 +38,7 @@
 9. **Autentikasi Pengguna**: Registrasi akun baru dengan Bcrypt hashing dan Login dengan Bearer Token Sanctum.
 
 ### B. Fitur Administrator
-1. **Dashboard Statistik**: Metrik total koleksi buku, total kategori, total pelanggan, total pesanan masuk, dan omset lunas.
+1. **Dashboard Statistik**: Metrik total koleksi buku, total kategori, total pelanggan, total pesanan masuk, dan omset lunas dalam balutan palet Forest Green & Warm Cream.
 2. **Kelola Kategori (CRUD)**: Tambah, edit, hapus kategori buku, dan melihat jumlah buku di setiap kategori.
 3. **Kelola Buku (CRUD & Upload Cover)**: Tambah buku baru, pengaturan harga/stok, upload file gambar cover, edit data, dan hapus buku.
 4. **Kelola Pesanan Pelanggan**: Tinjau seluruh pesanan masuk, rincian buku yang dipesan, serta pembaruan status pesanan dan status pembayaran (*Unpaid $\rightarrow$ Paid*).
@@ -36,87 +49,34 @@
 
 ## 🛠️ Teknologi yang Digunakan
 
-* **Frontend**: ReactJS (Vite), React Router v6, Axios HTTP Client, Lucide React Icons, Modern Minimalist CSS.
+* **Frontend**: ReactJS (Vite), React Router v6, Axios HTTP Client, Lucide React Icons, Palet Styling Warm Green & Cream.
 * **Backend**: PHP 8.2+, Laravel 10 LTS REST API, Laravel Sanctum (Token Auth), Eloquent ORM.
 * **Database**: MySQL (MariaDB) dengan 8 tabel ternormalisasi dan foreign keys.
 * **Arsitektur**: Decoupled Single Page Application (SPA) + RESTful API.
 
 ---
 
-## 📋 Prasyarat Lingkungan (Prerequisites)
+## ⚙️ Panduan Menjalankan Aplikasi
 
-Pastikan komputer telah terpasang:
-1. **PHP**: Versi `8.2` atau lebih baru
-2. **Composer**: Versi `2.x`
-3. **Node.js**: Versi `18.x` atau lebih baru (npm `9.x`+)
-4. **MySQL / XAMPP**: Layanan MySQL aktif berjalan di port `3306`
-
----
-
-## ⚙️ Panduan Instalasi & Menjalankan Aplikasi
-
-### 1. Konfigurasi Backend (Laravel)
-
-Buka terminal dan arahkan ke folder `backend`:
+### 1. Server Backend (Laravel)
 ```bash
 cd backend
-```
-
-Salin file environment (jika belum ada) dan sesuaikan koneksi database MySQL:
-```bash
-cp .env.example .env
-```
-Pastikan pengaturan `.env` sesuai dengan database MySQL Anda:
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=bookspace_db
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-Jalankan migrasi tabel dan pengisian data awal (*seeder*):
-```bash
-php artisan migrate:fresh --seed
-```
-
-Hubungkan storage link untuk melayani upload cover buku:
-```bash
-php artisan storage:link
-```
-
-Jalankan server backend Laravel:
-```bash
 php artisan serve --port=8000
 ```
-> Backend API kini berjalan aktif di: `http://127.0.0.1:8000`
+> API aktif berjalan di: `http://127.0.0.1:8000/api`
 
----
-
-### 2. Konfigurasi Frontend (React + Vite)
-
-Buka terminal baru dan arahkan ke folder `frontend`:
+### 2. Server Frontend (React + Vite)
 ```bash
 cd frontend
-```
-
-Instal dependensi:
-```bash
-npm install
-```
-
-Jalankan server pengembangan Vite:
-```bash
 npm run dev
 ```
-> Frontend kini berjalan aktif di: `http://127.0.0.1:5173`
+> Antarmuka website aktif berjalan di: `http://127.0.0.1:5173`
 
 ---
 
 ## 🔑 Akun Demo Pengujian (Untuk Asesor BNSP)
 
-Untuk mempermudah pengujian saat demonstrasi langsung di hadapan asesor, Anda dapat menggunakan akun yang sudah di-seed berikut atau menggunakan tombol **Demo Akun Cepat** di halaman `/login`:
+Untuk mempermudah pengujian saat demonstrasi langsung di hadapan asesor, pada halaman login ([http://127.0.0.1:5173/login](http://127.0.0.1:5173/login)) telah disediakan tombol **Uji Coba Cepat (Akun Demo BNSP)**:
 
 | Peran (Role) | Alamat Email | Kata Sandi | Hak Akses Fitur |
 |---|---|---|---|
@@ -148,11 +108,11 @@ bookstore/
 │   │   ├── pages/admin/           # 6 Halaman Dashboard Admin
 │   │   ├── routes/                # Routing & ProtectedRoute Guards
 │   │   ├── services/api.js        # Axios Client Configuration
-│   │   └── index.css              # Modern Minimalist Bookstore Styling
+│   │   └── index.css              # Warm Green & Cream Styling
 │   └── package.json
 │
 ├── documentation/                 # Dokumentasi Khusus Uji Asesmen BNSP
-│   ├── DOKUMENTASI_TEKNIS_BNSP.md # Dokumentasi Lengkap & ERD
+│   ├── DOKUMENTASI_TEKNIS_BNSP.md # Dokumentasi Lengkap, ERD & Alur Logika
 │   └── PANDUAN_PRESENTASI_SLIDE.md# Panduan Menyusun 8 Slide Presentasi
 │
 ├── test_e2e_http.js               # Skrip Uji Otomatis Seluruh Alur API
@@ -163,9 +123,8 @@ bookstore/
 
 ## 📄 Berkas Dokumentasi Presentasi
 
-Silakan buka folder `documentation/` untuk membaca referensi penyusunan materi presentasi:
 * [DOKUMENTASI_TEKNIS_BNSP.md](file:///c:/xampp/htdocs/bookstore/documentation/DOKUMENTASI_TEKNIS_BNSP.md): Berisi latar belakang, kebutuhan fungsional, kamus data, ERD Mermaid, daftar endpoint API, dan potongan kode penting.
 * [PANDUAN_PRESENTASI_SLIDE.md](file:///c:/xampp/htdocs/bookstore/documentation/PANDUAN_PRESENTASI_SLIDE.md): Berisi panduan terperinci menyusun 8 slide presentasi serta daftar 10 titik screenshot yang disarankan.
 
 ---
-*Dibuat dengan dedikasi untuk memenuhi standar Asesmen Sertifikasi BNSP Junior Web Developer.*
+*Didedikasikan untuk memenuhi standar Asesmen Sertifikasi BNSP Junior Web Developer.*

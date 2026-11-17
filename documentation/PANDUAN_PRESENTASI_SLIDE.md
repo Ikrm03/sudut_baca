@@ -1,12 +1,15 @@
 # PANDUAN PENYUSUNAN SLIDE PRESENTASI ASESMEN BNSP
-## Project: BookSpace – Online Bookstore (Junior Web Developer)
+## Project: SudutBaca – Online Bookstore (Junior Web Developer)
+> **Tagline**: "Temukan Bacaan Favoritmu." | **Palet**: Warm Green & Cream (#315C46 & #F8F5EC)
 
 Dokumen ini disusun sebagai panduan dan bahan referensi bagi Anda untuk membuat slide presentasi sendiri (misalnya menggunakan PowerPoint, Canva, atau Google Slides) sesuai 8 materi presentasi yang dipersyaratkan oleh Asesor BNSP.
 
 ---
 
 ### SLIDE 1: JUDUL PROYEK
-* **Judul Utama**: Pengembangan Aplikasi Toko Buku Online Berbasis Web "BookSpace"
+* **Judul Utama**: Pengembangan Aplikasi Toko Buku Online "SudutBaca"
+* **Tagline**: "Temukan Bacaan Favoritmu."
+* **Konsep Desain**: Modern Minimalist, Warm, Natural & Elegant (Warm Green & Cream)
 * **Sub-Judul**: Memenuhi Persyaratan Materi Uji Kompetensi (MUK) Skema Junior Web Developer - BNSP
 * **Nama Asesi / Peserta**: [Nama Lengkap Anda]
 * **No. Registrasi / NIK**: [Nomor Anda]

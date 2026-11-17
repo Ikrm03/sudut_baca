@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, ShieldCheck, Truck, Sparkles, Search } from 'lucide-react';
+import { ArrowRight, BookOpen, ShieldCheck, Truck, Sparkles, Compass, Feather } from 'lucide-react';
 import api from '../../services/api';
 import BookCard from '../../components/BookCard';
 
@@ -35,99 +35,121 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section SudutBaca */}
       <section className="hero-section">
         <div className="container">
           <div className="hero-grid">
             <div>
+              {/* Badge Tagline */}
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '0.35rem 0.85rem',
-                backgroundColor: 'var(--color-primary-light)',
-                color: 'var(--color-primary)',
+                padding: '0.4rem 0.95rem',
+                backgroundColor: 'var(--color-forest-green-light)',
+                color: 'var(--color-forest-green)',
                 borderRadius: 'var(--radius-full)',
                 fontSize: '0.825rem',
                 fontWeight: 700,
-                marginBottom: '1.25rem'
+                marginBottom: '1.25rem',
+                border: '1px solid var(--color-soft-beige)'
               }}>
-                <Sparkles size={14} /> Toko Buku Online Terpercaya
+                <Feather size={14} color="var(--color-forest-green)" />
+                <span>Temukan Bacaan Favoritmu</span>
               </div>
+
               <h1 style={{
-                fontSize: 'clamp(2.2rem, 4vw, 3.25rem)',
+                fontSize: 'clamp(2.25rem, 4.2vw, 3.4rem)',
                 fontWeight: 800,
-                color: 'var(--color-dark)',
-                lineHeight: 1.15,
+                color: 'var(--color-forest-green)',
+                lineHeight: 1.18,
                 letterSpacing: '-0.03em',
                 marginBottom: '1.25rem'
               }}>
-                Jelajahi Dunia Literasi Bersama <span style={{ color: 'var(--color-primary)' }}>BookSpace</span>
+                Ruang Nyaman Menemukan Buku Terbaik di <span style={{ color: 'var(--color-sage-green)' }}>SudutBaca</span>
               </h1>
+
               <p style={{
                 fontSize: '1.1rem',
-                color: 'var(--color-muted)',
-                lineHeight: 1.6,
-                marginBottom: '2rem',
-                maxWidth: '520px'
+                color: 'var(--color-dark-brown-muted)',
+                lineHeight: 1.7,
+                marginBottom: '2.25rem',
+                maxWidth: '540px'
               }}>
-                Temukan buku pilihan dari berbagai kategori berkualitas. Nikmati kemudahan memesan dengan metode <strong>Payment at Delivery</strong> — bayar saat buku sampai di tangan Anda.
+                Koleksi buku kurasi pilihan untuk memperkaya wawasan, inspirasi, dan ketenangan pikiran. Nikmati kemudahan memesan dengan jaminan <strong>Payment at Delivery (COD)</strong> — bayar tunai saat buku tiba di genggaman Anda.
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/books" className="btn btn-primary btn-lg">
-                  Jelajahi Katalog Buku
+                  Jelajahi Katalog Pustaka
                   <ArrowRight size={18} />
                 </Link>
                 <Link to="/about" className="btn btn-outline btn-lg">
-                  Pelajari Layanan Kami
+                  Tentang SudutBaca
                 </Link>
               </div>
             </div>
 
-            {/* Visual Hero Card */}
+            {/* Visual Hero Card SudutBaca */}
             <div style={{
               display: 'flex',
               justifyContent: 'center',
               position: 'relative'
             }}>
               <div style={{
-                background: 'linear-gradient(135deg, #1e293b, #0f172a)',
-                color: '#fff',
+                backgroundColor: '#FFFFFF',
+                color: 'var(--color-dark-brown)',
                 padding: '2.5rem',
                 borderRadius: 'var(--radius-lg)',
-                boxShadow: 'var(--shadow-lg)',
-                maxWidth: '400px',
-                width: '100%'
+                boxShadow: 'var(--shadow-md)',
+                maxWidth: '420px',
+                width: '100%',
+                border: '1px solid var(--color-soft-beige)'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.75rem', paddingBottom: '1.25rem', borderBottom: '1px solid var(--color-soft-beige)' }}>
                   <div className="brand-icon">
                     <BookOpen size={20} />
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '1.15rem', fontWeight: 700 }}>BookSpace Store</h3>
-                    <p style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Pengiriman Cepat & Terpercaya</p>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>SudutBaca</h3>
+                    <p style={{ fontSize: '0.825rem', color: 'var(--color-sage-green)', fontWeight: 600 }}>Toko Buku Online Terpercaya</p>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '1.5rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.35rem' }}>
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ padding: '0.5rem', background: 'rgba(255,255,255,0.1)', borderRadius: 'var(--radius-sm)' }}>
-                      <Truck size={20} color="#818cf8" />
+                    <div style={{ padding: '0.6rem', backgroundColor: 'var(--color-forest-green-light)', borderRadius: 'var(--radius-sm)' }}>
+                      <Truck size={20} color="var(--color-forest-green)" />
                     </div>
                     <div>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Payment at Delivery</h4>
-                      <p style={{ fontSize: '0.825rem', color: '#94a3b8' }}>Bayar aman di tempat saat pesanan tiba.</p>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>Payment at Delivery</h4>
+                      <p style={{ fontSize: '0.825rem', color: 'var(--color-dark-brown-muted)', lineHeight: '1.5' }}>
+                        Bayar aman langsung kepada kurir saat buku sampai di alamat Anda.
+                      </p>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ padding: '0.5rem', background: 'rgba(255,255,255,0.1)', borderRadius: 'var(--radius-sm)' }}>
-                      <ShieldCheck size={20} color="#34d399" />
+                    <div style={{ padding: '0.6rem', backgroundColor: 'var(--color-forest-green-light)', borderRadius: 'var(--radius-sm)' }}>
+                      <ShieldCheck size={20} color="var(--color-forest-green)" />
                     </div>
                     <div>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>100% Produk Asli</h4>
-                      <p style={{ fontSize: '0.825rem', color: '#94a3b8' }}>Koleksi buku bergaransi dan terpercaya.</p>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>Jaminan Buku Original</h4>
+                      <p style={{ fontSize: '0.825rem', color: 'var(--color-dark-brown-muted)', lineHeight: '1.5' }}>
+                        Seluruh koleksi pustaka terjamin keasliannya dan bersegel rapi.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div style={{ padding: '0.6rem', backgroundColor: 'var(--color-forest-green-light)', borderRadius: 'var(--radius-sm)' }}>
+                      <Compass size={20} color="var(--color-forest-green)" />
+                    </div>
+                    <div>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>Kurasi Kategori Lengkap</h4>
+                      <p style={{ fontSize: '0.825rem', color: 'var(--color-dark-brown-muted)', lineHeight: '1.5' }}>
+                        Teknologi, bisnis, sains, pengembangan diri, dan karya sastra pilihan.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -137,29 +159,34 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Categories Chips */}
-      <section style={{ padding: '2.5rem 0 1rem' }}>
+      {/* Kategori Pilihan Pills */}
+      <section style={{ padding: '3rem 0 1rem' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-dark)' }}>
-              Kategori Pilihan
-            </h2>
-            <Link to="/books" style={{ fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 600 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.35rem' }}>
+            <div>
+              <h2 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
+                Kategori Bacaan Pilihan
+              </h2>
+              <p style={{ fontSize: '0.875rem', color: 'var(--color-dark-brown-muted)' }}>
+                Pilih topik bacaan yang paling Anda minati hari ini
+              </p>
+            </div>
+            <Link to="/books" style={{ fontSize: '0.9rem', color: 'var(--color-forest-green)', fontWeight: 700 }}>
               Semua Kategori →
             </Link>
           </div>
 
-          <div style={{ display: 'flex', gap: '0.75rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.85rem', overflowX: 'auto', paddingBottom: '0.75rem' }}>
             <Link
               to="/books"
               style={{
-                padding: '0.5rem 1.25rem',
-                backgroundColor: '#fff',
-                border: '1px solid var(--color-border)',
+                padding: '0.55rem 1.35rem',
+                backgroundColor: 'var(--color-forest-green)',
+                border: '1px solid var(--color-forest-green)',
                 borderRadius: 'var(--radius-full)',
                 fontSize: '0.875rem',
-                fontWeight: 600,
-                color: 'var(--color-dark)',
+                fontWeight: 700,
+                color: '#FFFFFF',
                 whiteSpace: 'nowrap'
               }}
             >
@@ -170,14 +197,23 @@ const HomePage = () => {
                 key={cat.id}
                 to={`/books?category_id=${cat.id}`}
                 style={{
-                  padding: '0.5rem 1.25rem',
-                  backgroundColor: '#fff',
-                  border: '1px solid var(--color-border)',
+                  padding: '0.55rem 1.35rem',
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid var(--color-soft-beige)',
                   borderRadius: 'var(--radius-full)',
                   fontSize: '0.875rem',
                   fontWeight: 600,
-                  color: 'var(--color-dark)',
-                  whiteSpace: 'nowrap'
+                  color: 'var(--color-dark-brown)',
+                  whiteSpace: 'nowrap',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-sage-green)';
+                  e.currentTarget.style.color = 'var(--color-forest-green)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-soft-beige)';
+                  e.currentTarget.style.color = 'var(--color-dark-brown)';
                 }}
               >
                 {cat.name} ({cat.books_count || 0})
@@ -187,16 +223,16 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Featured Books Grid */}
-      <section style={{ padding: '2rem 0 4rem' }}>
+      {/* Katalog Buku Terbaru */}
+      <section style={{ padding: '2rem 0 5rem' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
             <div>
-              <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--color-dark)', letterSpacing: '-0.02em' }}>
-                Katalog Buku Terbaru
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)', letterSpacing: '-0.02em' }}>
+                Katalog Pustaka Terbaru
               </h2>
-              <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem' }}>
-                Koleksi buku terlengkap yang siap menambah wawasan Anda
+              <p style={{ color: 'var(--color-dark-brown-muted)', fontSize: '0.95rem' }}>
+                Buku-buku berkualitas yang siap menemani waktu membaca Anda
               </p>
             </div>
             <Link to="/books" className="btn btn-outline btn-sm">
@@ -205,14 +241,14 @@ const HomePage = () => {
           </div>
 
           {loading ? (
-            <div style={{ textAlign: 'center', padding: '3rem' }}>
-              <p style={{ color: 'var(--color-muted)' }}>Memuat katalog buku...</p>
+            <div style={{ textAlign: 'center', padding: '4rem' }}>
+              <p style={{ color: 'var(--color-dark-brown-muted)' }}>Memuat katalog buku SudutBaca...</p>
             </div>
           ) : (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-              gap: '1.5rem'
+              gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))',
+              gap: '1.75rem'
             }}>
               {books.slice(0, 8).map((book) => (
                 <BookCard key={book.id} book={book} />

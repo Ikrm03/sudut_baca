@@ -1,14 +1,17 @@
 # DOKUMENTASI TEKNIS & PANDUAN ASESMEN BNSP
-# Project: BookSpace – Online Bookstore
+# Project: SudutBaca – Online Bookstore
+> **Tagline**: "Temukan Bacaan Favoritmu."  
+> **Konsep Desain**: Modern Minimalist, Warm, Natural, dan Elegant (Warm Green & Cream)  
 ### Sertifikasi Skema: Junior Web Developer (MUK)
 
 ---
 
 ## 1. IDENTITAS PROYEK
-* **Nama Aplikasi**: BookSpace – Online Bookstore
+* **Nama Aplikasi**: SudutBaca – Online Bookstore
+* **Tagline**: "Temukan Bacaan Favoritmu."
+* **Palet Warna**: Warm Green & Cream (Forest Green `#315C46`, Warm Cream `#F8F5EC`, Sage Green `#789477`, Soft Beige `#E8DCC5`, Dark Brown `#463D32`)
 * **Kategori**: Aplikasi Web E-Commerce Toko Buku Online
 * **Skema Sertifikasi**: Junior Web Developer (BNSP)
-* **Pengembang**: Peserta Sertifikasi BNSP Junior Web Developer
 * **Arsitektur**: Decoupled Client-Server (Single Page Application + RESTful API)
 
 ---
@@ -18,7 +21,7 @@
 ### 2.1 Latar Belakang Masalah
 Kebutuhan akses terhadap literatur fisik yang berkualitas seringkali terkendala oleh sistem katalog toko buku konvensional yang tidak terpusat, ketidakpastian stok barang, serta proses pemesanan digital yang rumit. Selain itu, banyak calon pembeli yang enggan bertransaksi online karena keharusan menggunakan dompet digital atau kartu perbankan yang rentan risiko keamanan data pribadi.
 
-BookSpace hadir sebagai solusi toko buku online modern yang sederhana, transparan, dan terpercaya. Dengan metode pembayaran **Payment at Delivery (COD)**, pelanggan dapat memesan buku secara mudah dan melakukan pembayaran tunai langsung saat pesanan diserahkan oleh kurir di alamat tujuan.
+SudutBaca hadir sebagai solusi toko buku online modern yang sederhana, transparan, dan terpercaya dengan sentuhan visual natural yang hangat dan menenangkan. Dengan metode pembayaran **Payment at Delivery (COD)**, pelanggan dapat memesan buku secara mudah dan melakukan pembayaran tunai langsung saat pesanan diserahkan oleh kurir di alamat tujuan.
 
 ### 2.2 Tujuan Aplikasi
 1. Memfasilitasi pengguna untuk menelusuri katalog buku berdasar kategori, melakukan pencarian judul, dan mengecek ketersediaan stok secara real-time.

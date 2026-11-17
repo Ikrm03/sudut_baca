@@ -1,72 +1,77 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, ShieldCheck, Truck, Headphones } from 'lucide-react';
+import { BookOpen, ShieldCheck, Truck, Headphones, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          {/* Kolom 1: Profil Toko */}
+          {/* Kolom 1: Profil Toko SudutBaca */}
           <div>
-            <div className="brand-logo" style={{ color: '#fff', marginBottom: '1rem' }}>
-              <div className="brand-icon">
+            <div className="brand-logo" style={{ color: 'var(--color-warm-cream)', marginBottom: '0.75rem' }}>
+              <div className="brand-icon" style={{ backgroundColor: 'var(--color-warm-cream)', color: 'var(--color-forest-green)' }}>
                 <BookOpen size={20} />
               </div>
-              <span>BookSpace</span>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ lineHeight: '1.1' }}>SudutBaca</span>
+                <span style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--color-soft-beige)', fontStyle: 'italic' }}>
+                  "Temukan Bacaan Favoritmu."
+                </span>
+              </div>
             </div>
-            <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#94a3b8', maxWidth: '320px' }}>
-              Platform toko buku online modern yang menghadirkan literatur berkualitas, proses belanja mudah, dan jaminan pengiriman aman dengan metode <strong>Payment at Delivery</strong>.
+            <p style={{ fontSize: '0.9rem', lineHeight: '1.65', color: '#D3E0D6', maxWidth: '320px', marginTop: '0.5rem' }}>
+              SudutBaca adalah ruang membaca online yang menghadirkan buku-buku pilihan berkualitas dalam suasana hangat dan nyaman, dilengkapi metode aman <strong>Payment at Delivery</strong>.
             </p>
           </div>
 
           {/* Kolom 2: Navigasi Cepat */}
           <div>
-            <h4 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600, marginBottom: '1rem' }}>
-              Navigasi Cepat
+            <h4 style={{ color: 'var(--color-warm-cream)', fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
+              Jelajahi SudutBaca
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.9rem' }}>
-              <li><Link to="/" style={{ color: '#94a3b8' }}>Beranda</Link></li>
-              <li><Link to="/books" style={{ color: '#94a3b8' }}>Katalog Buku</Link></li>
-              <li><Link to="/about" style={{ color: '#94a3b8' }}>Tentang BookSpace</Link></li>
-              <li><Link to="/contact" style={{ color: '#94a3b8' }}>Hubungi Admin</Link></li>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.9rem' }}>
+              <li><Link to="/">Beranda Utama</Link></li>
+              <li><Link to="/books">Katalog Seluruh Buku</Link></li>
+              <li><Link to="/about">Tentang SudutBaca</Link></li>
+              <li><Link to="/contact">Hubungi Pengelola</Link></li>
             </ul>
           </div>
 
-          {/* Kolom 3: Layanan & Keunggulan */}
+          {/* Kolom 3: Layanan Toko */}
           <div>
-            <h4 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600, marginBottom: '1rem' }}>
-              Layanan Toko
+            <h4 style={{ color: 'var(--color-warm-cream)', fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
+              Layanan & Komitmen
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.9rem', color: '#94a3b8' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Truck size={16} color="var(--color-primary)" />
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.9rem', color: '#D3E0D6' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <Truck size={17} color="var(--color-soft-beige)" />
                 Payment at Delivery (COD)
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ShieldCheck size={16} color="var(--color-success)" />
-                Buku Original & Berkualitas
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <ShieldCheck size={17} color="var(--color-soft-beige)" />
+                100% Koleksi Buku Asli
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Headphones size={16} color="var(--color-info)" />
-                Dukungan Pelanggan
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                <Headphones size={17} color="var(--color-soft-beige)" />
+                Layanan Pelanggan Ramah
               </li>
             </ul>
           </div>
 
           {/* Kolom 4: Sertifikasi BNSP */}
           <div>
-            <h4 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600, marginBottom: '1rem' }}>
-              Sertifikasi
+            <h4 style={{ color: 'var(--color-warm-cream)', fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
+              Standar Asesmen
             </h4>
-            <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
-              Proyek ini dibangun untuk memenuhi persyaratan <strong>Materi Uji Kompetensi (MUK) BNSP Junior Web Developer</strong>.
+            <p style={{ fontSize: '0.85rem', color: '#D3E0D6', lineHeight: '1.6' }}>
+              Proyek ini dibangun untuk memenuhi Materi Uji Kompetensi (MUK) <strong>Junior Web Developer</strong> - Badan Nasional Sertifikasi Profesi (BNSP).
             </p>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} BookSpace – Online Bookstore. Hak Cipta Dilindungi Undang-Undang.</p>
+          <p>© {new Date().getFullYear()} <strong>SudutBaca</strong> – Online Bookstore. Hak Cipta Dilindungi Undang-Undang.</p>
         </div>
       </div>
     </footer>

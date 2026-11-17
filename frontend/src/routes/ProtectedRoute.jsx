@@ -18,7 +18,7 @@ export const ProtectedRoute = ({ requireAdmin = false }) => {
             animation: 'spin 0.8s linear infinite',
             margin: '0 auto 1rem'
           }}></div>
-          <p style={{ color: 'var(--color-muted)' }}>Memuat sesi BookSpace...</p>
+          <p style={{ color: 'var(--color-dark-brown-muted)' }}>Memuat sesi SudutBaca...</p>
           <style>{`
             @keyframes spin {
               to { transform: rotate(360deg); }

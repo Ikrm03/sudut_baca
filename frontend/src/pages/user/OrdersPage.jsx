@@ -55,7 +55,7 @@ const OrdersPage = () => {
             Belum Ada Riwayat Pesanan
           </h2>
           <p style={{ color: 'var(--color-muted)', maxWidth: '420px', margin: '0 auto 2rem' }}>
-            Anda belum pernah membuat transaksi di BookSpace. Silakan temukan buku impian Anda di katalog!
+            Anda belum pernah membuat transaksi di SudutBaca. Silakan temukan buku impian Anda di katalog!
           </p>
           <Link to="/books" className="btn btn-primary btn-lg">
             Mulai Belanja Sekarang

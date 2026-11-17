@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@bookspace.com'],
             [
-                'name' => 'Admin BookSpace',
+                'name' => 'Admin SudutBaca',
                 'password' => Hash::make('password123'),
                 'role' => 'admin',
             ]

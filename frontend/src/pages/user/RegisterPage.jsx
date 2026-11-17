@@ -59,25 +59,25 @@ const RegisterPage = () => {
   };
 
   return (
-    <div style={{ padding: '4rem 0 6rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ padding: '4.5rem 0 6.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ maxWidth: '460px', width: '100%', margin: '0 auto', padding: '0 1.25rem' }}>
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-lg)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '2.5rem',
           boxShadow: 'var(--shadow-md)'
         }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <div className="brand-icon" style={{ margin: '0 auto 1rem', width: '3rem', height: '3rem' }}>
-              <BookOpen size={24} />
+            <div className="brand-icon" style={{ margin: '0 auto 1rem', width: '3.2rem', height: '3.2rem' }}>
+              <BookOpen size={26} />
             </div>
-            <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
-              Buat Akun BookSpace
+            <h1 style={{ fontSize: '1.85rem', fontWeight: 800, color: 'var(--color-forest-green)', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
+              Daftar Akun SudutBaca
             </h1>
-            <p style={{ color: 'var(--color-muted)', fontSize: '0.9rem' }}>
-              Daftar untuk mulai memesan buku berkualitas
+            <p style={{ color: 'var(--color-dark-brown-muted)', fontSize: '0.9rem' }}>
+              Bergabung untuk menemukan buku bacaan terbaik Anda
             </p>
           </div>
 
@@ -155,16 +155,16 @@ const RegisterPage = () => {
               type="submit"
               disabled={loading}
               className="btn btn-primary btn-lg"
-              style={{ width: '100%', marginTop: '0.75rem' }}
+              style={{ width: '100%', marginTop: '0.85rem' }}
             >
               <UserPlus size={18} />
               {loading ? 'Mendaftarkan Akun...' : 'Daftar Sekarang'}
             </button>
           </form>
 
-          <div style={{ textAlign: 'center', marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--color-border)', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
+          <div style={{ textAlign: 'center', marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid var(--color-soft-beige)', fontSize: '0.875rem', color: 'var(--color-dark-brown-muted)' }}>
             Sudah memiliki akun?{' '}
-            <Link to="/login" style={{ fontWeight: 700, color: 'var(--color-primary)' }}>
+            <Link to="/login" style={{ fontWeight: 700, color: 'var(--color-forest-green)' }}>
               Masuk di sini
             </Link>
           </div>

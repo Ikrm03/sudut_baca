@@ -31,7 +31,7 @@ const UsersAdminPage = () => {
           Daftar Pengguna Terdaftar
         </h1>
         <p style={{ color: 'var(--color-muted)', fontSize: '0.9rem' }}>
-          Informasi akun pelanggan dan administrator yang terdaftar di sistem BookSpace
+          Informasi akun pelanggan dan administrator yang terdaftar di sistem SudutBaca
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, Check, BookOpen } from 'lucide-react';
+import { ShoppingCart, Check } from 'lucide-react';
 import { formatRupiah } from '../services/api';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
@@ -52,13 +52,13 @@ const BookCard = ({ book }) => {
           <div style={{
             position: 'absolute',
             inset: 0,
-            backgroundColor: 'rgba(15, 23, 42, 0.75)',
-            color: '#fff',
+            backgroundColor: 'rgba(70, 61, 50, 0.85)',
+            color: '#FFFFFF',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             fontWeight: 700,
-            fontSize: '0.9rem',
+            fontSize: '0.875rem',
             letterSpacing: '0.05em'
           }}>
             STOK HABIS
@@ -82,8 +82,12 @@ const BookCard = ({ book }) => {
         <div className="book-footer">
           <div>
             <div className="book-price">{formatRupiah(book.price)}</div>
-            <span style={{ fontSize: '0.75rem', color: book.stock > 0 ? 'var(--color-success)' : 'var(--color-danger)', fontWeight: 600 }}>
-              {book.stock > 0 ? `Stok: ${book.stock}` : 'Habis'}
+            <span style={{
+              fontSize: '0.75rem',
+              color: book.stock > 0 ? 'var(--color-forest-green)' : 'var(--color-danger)',
+              fontWeight: 700
+            }}>
+              {book.stock > 0 ? `Tersedia: ${book.stock}` : 'Habis'}
             </span>
           </div>
 
@@ -91,8 +95,8 @@ const BookCard = ({ book }) => {
             <button
               onClick={handleAddToCart}
               disabled={adding || book.stock <= 0}
-              className={`btn btn-sm ${added ? 'btn-primary' : 'btn-outline'}`}
-              style={{ padding: '0.45rem 0.75rem' }}
+              className={`btn btn-sm ${added ? 'btn-secondary' : 'btn-primary'}`}
+              style={{ padding: '0.5rem 0.85rem' }}
               title={book.stock > 0 ? 'Tambahkan ke keranjang' : 'Stok habis'}
             >
               {added ? (
@@ -103,7 +107,7 @@ const BookCard = ({ book }) => {
               ) : (
                 <>
                   <ShoppingCart size={16} />
-                  <span>+ Keranjang</span>
+                  <span>+ Beli</span>
                 </>
               )}
             </button>

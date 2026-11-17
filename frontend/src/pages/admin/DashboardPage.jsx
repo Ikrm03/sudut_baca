@@ -29,7 +29,7 @@ const DashboardPage = () => {
   if (loading) {
     return (
       <div style={{ textAlign: 'center', padding: '4rem 0' }}>
-        <p style={{ color: 'var(--color-muted)' }}>Memuat data statistik dashboard...</p>
+        <p style={{ color: 'var(--color-dark-brown-muted)' }}>Memuat ringkasan data SudutBaca...</p>
       </div>
     );
   }
@@ -38,15 +38,15 @@ const DashboardPage = () => {
     <div>
       {/* Page Title */}
       <div style={{ marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)', letterSpacing: '-0.02em' }}>
-          Ringkasan Statistik Toko
+        <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)', letterSpacing: '-0.02em' }}>
+          Statistik & Aktivitas Toko
         </h1>
-        <p style={{ color: 'var(--color-muted)', fontSize: '0.9rem' }}>
-          Pantau seluruh aktivitas katalog, pengguna, dan transaksi pesanan BookSpace secara real-time
+        <p style={{ color: 'var(--color-dark-brown-muted)', fontSize: '0.9rem' }}>
+          Ringkasan inventaris buku, pengguna terdaftar, dan arus pesanan Payment at Delivery secara real-time
         </p>
       </div>
 
-      {/* 4 Metric Cards */}
+      {/* 4 Kartu Metrik */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
@@ -55,9 +55,9 @@ const DashboardPage = () => {
       }}>
         {/* Card 1: Books */}
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '1.5rem',
           boxShadow: 'var(--shadow-sm)',
           display: 'flex',
@@ -65,11 +65,11 @@ const DashboardPage = () => {
           gap: '1.25rem'
         }}>
           <div style={{
-            width: '3rem',
-            height: '3rem',
+            width: '3.2rem',
+            height: '3.2rem',
             borderRadius: 'var(--radius-md)',
-            backgroundColor: 'var(--color-primary-light)',
-            color: 'var(--color-primary)',
+            backgroundColor: 'var(--color-forest-green-light)',
+            color: 'var(--color-forest-green)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -77,8 +77,8 @@ const DashboardPage = () => {
             <BookOpen size={24} />
           </div>
           <div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--color-muted)', fontWeight: 600 }}>Total Koleksi Buku</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)' }}>
+            <div style={{ fontSize: '0.85rem', color: 'var(--color-dark-brown-muted)', fontWeight: 600 }}>Total Koleksi Buku</div>
+            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
               {stats?.total_books || 0}
             </div>
           </div>
@@ -86,9 +86,9 @@ const DashboardPage = () => {
 
         {/* Card 2: Categories */}
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '1.5rem',
           boxShadow: 'var(--shadow-sm)',
           display: 'flex',
@@ -96,11 +96,11 @@ const DashboardPage = () => {
           gap: '1.25rem'
         }}>
           <div style={{
-            width: '3rem',
-            height: '3rem',
+            width: '3.2rem',
+            height: '3.2rem',
             borderRadius: 'var(--radius-md)',
-            backgroundColor: '#e0f2fe',
-            color: '#0284c7',
+            backgroundColor: 'var(--color-sage-green-light)',
+            color: 'var(--color-sage-green)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -108,8 +108,8 @@ const DashboardPage = () => {
             <Layers size={24} />
           </div>
           <div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--color-muted)', fontWeight: 600 }}>Total Kategori</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)' }}>
+            <div style={{ fontSize: '0.85rem', color: 'var(--color-dark-brown-muted)', fontWeight: 600 }}>Total Kategori</div>
+            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
               {stats?.total_categories || 0}
             </div>
           </div>
@@ -117,9 +117,9 @@ const DashboardPage = () => {
 
         {/* Card 3: Users */}
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '1.5rem',
           boxShadow: 'var(--shadow-sm)',
           display: 'flex',
@@ -127,11 +127,11 @@ const DashboardPage = () => {
           gap: '1.25rem'
         }}>
           <div style={{
-            width: '3rem',
-            height: '3rem',
+            width: '3.2rem',
+            height: '3.2rem',
             borderRadius: 'var(--radius-md)',
-            backgroundColor: 'var(--color-success-light)',
-            color: 'var(--color-success)',
+            backgroundColor: 'var(--color-soft-beige-light)',
+            color: 'var(--color-dark-brown)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -139,8 +139,8 @@ const DashboardPage = () => {
             <Users size={24} />
           </div>
           <div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--color-muted)', fontWeight: 600 }}>Total Pelanggan</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)' }}>
+            <div style={{ fontSize: '0.85rem', color: 'var(--color-dark-brown-muted)', fontWeight: 600 }}>Total Pelanggan</div>
+            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
               {stats?.total_users || 0}
             </div>
           </div>
@@ -148,9 +148,9 @@ const DashboardPage = () => {
 
         {/* Card 4: Orders */}
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--color-border)',
+          border: '1px solid var(--color-soft-beige)',
           padding: '1.5rem',
           boxShadow: 'var(--shadow-sm)',
           display: 'flex',
@@ -158,11 +158,11 @@ const DashboardPage = () => {
           gap: '1.25rem'
         }}>
           <div style={{
-            width: '3rem',
-            height: '3rem',
+            width: '3.2rem',
+            height: '3.2rem',
             borderRadius: 'var(--radius-md)',
-            backgroundColor: 'var(--color-warning-light)',
-            color: '#b45309',
+            backgroundColor: 'var(--color-forest-green-light)',
+            color: 'var(--color-forest-green)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -170,82 +170,91 @@ const DashboardPage = () => {
             <ShoppingBag size={24} />
           </div>
           <div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--color-muted)', fontWeight: 600 }}>Total Pesanan Masuk</div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-dark)' }}>
+            <div style={{ fontSize: '0.85rem', color: 'var(--color-dark-brown-muted)', fontWeight: 600 }}>Total Pesanan Masuk</div>
+            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
               {stats?.total_orders || 0}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Revenue Banner */}
+      {/* Revenue & Pending Banner */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: '1.25rem',
         marginBottom: '2.5rem'
       }}>
+        {/* Banner Pendapatan (Forest Green #315C46) */}
         <div style={{
-          backgroundColor: '#1e293b',
-          color: '#fff',
+          backgroundColor: 'var(--color-forest-green)',
+          color: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          padding: '1.75rem',
+          padding: '1.85rem',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          boxShadow: '0 4px 12px rgba(49, 92, 70, 0.2)'
         }}>
           <div>
-            <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '0.35rem' }}>
-              Pendapatan Terverifikasi (Lunas)
+            <div style={{ fontSize: '0.875rem', color: '#D3E0D6', marginBottom: '0.4rem', fontWeight: 600 }}>
+              Pendapatan Terverifikasi (Lunas COD)
             </div>
-            <div style={{ fontSize: '1.85rem', fontWeight: 800, color: '#38bdf8' }}>
+            <div style={{ fontSize: '1.9rem', fontWeight: 800, color: 'var(--color-warm-cream)' }}>
               {formatRupiah(stats?.total_revenue || 0)}
             </div>
           </div>
-          <TrendingUp size={36} color="#38bdf8" />
+          <div style={{ padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.12)', borderRadius: 'var(--radius-md)' }}>
+            <TrendingUp size={32} color="var(--color-warm-cream)" />
+          </div>
         </div>
 
+        {/* Banner Pesanan Menunggu */}
         <div style={{
-          backgroundColor: '#fff',
+          backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--color-border)',
-          padding: '1.75rem',
+          border: '1px solid var(--color-soft-beige)',
+          padding: '1.85rem',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--color-muted)', marginBottom: '0.35rem' }}>
+            <div style={{ fontSize: '0.875rem', color: 'var(--color-dark-brown-muted)', marginBottom: '0.4rem', fontWeight: 600 }}>
               Pesanan Menunggu Konfirmasi (Pending)
             </div>
-            <div style={{ fontSize: '1.85rem', fontWeight: 800, color: '#b45309' }}>
+            <div style={{ fontSize: '1.9rem', fontWeight: 800, color: 'var(--color-warning)' }}>
               {stats?.pending_orders || 0} Transaksi
             </div>
           </div>
-          <Clock size={36} color="#b45309" />
+          <div style={{ padding: '0.75rem', backgroundColor: 'var(--color-warning-light)', borderRadius: 'var(--radius-md)' }}>
+            <Clock size={32} color="var(--color-warning)" />
+          </div>
         </div>
       </div>
 
-      {/* Recent Orders Section */}
+      {/* Tabel 5 Pesanan Terbaru */}
       <div style={{
-        backgroundColor: '#fff',
+        backgroundColor: '#FFFFFF',
         borderRadius: 'var(--radius-md)',
-        border: '1px solid var(--color-border)',
+        border: '1px solid var(--color-soft-beige)',
         boxShadow: 'var(--shadow-sm)',
         overflow: 'hidden'
       }}>
         <div style={{
-          padding: '1.25rem 1.5rem',
-          borderBottom: '1px solid var(--color-border)',
+          padding: '1.35rem 1.6rem',
+          borderBottom: '1px solid var(--color-soft-beige)',
+          backgroundColor: 'var(--color-soft-beige-light)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between'
         }}>
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-dark)' }}>
-            5 Pesanan Terbaru
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--color-forest-green)' }}>
+            5 Transaksi Pesanan Terbaru
           </h3>
-          <Link to="/admin/orders" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-            Lihat Semua Pesanan <ArrowRight size={14} />
+          <Link to="/admin/orders" style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-forest-green)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            Lihat Semua Pesanan <ArrowRight size={15} />
           </Link>
         </div>
 
@@ -266,18 +275,18 @@ const DashboardPage = () => {
                 stats.recent_orders.map((o) => (
                   <tr key={o.id}>
                     <td>
-                      <Link to="/admin/orders" style={{ fontWeight: 700, color: 'var(--color-primary)' }}>
+                      <Link to="/admin/orders" style={{ fontWeight: 700, color: 'var(--color-forest-green)' }}>
                         {o.order_number}
                       </Link>
                     </td>
                     <td>
-                      <div style={{ fontWeight: 600 }}>{o.recipient_name}</div>
-                      <div style={{ fontSize: '0.8rem', color: 'var(--color-muted)' }}>{o.user?.email || '-'}</div>
+                      <div style={{ fontWeight: 700, color: 'var(--color-dark-brown)' }}>{o.recipient_name}</div>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--color-dark-brown-muted)' }}>{o.user?.email || '-'}</div>
                     </td>
-                    <td style={{ fontSize: '0.85rem', color: 'var(--color-muted)' }}>
+                    <td style={{ fontSize: '0.85rem', color: 'var(--color-dark-brown-muted)' }}>
                       {formatDate(o.created_at)}
                     </td>
-                    <td style={{ fontWeight: 700 }}>
+                    <td style={{ fontWeight: 800, color: 'var(--color-forest-green)' }}>
                       {formatRupiah(o.total_price)}
                     </td>
                     <td>
@@ -290,7 +299,7 @@ const DashboardPage = () => {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={6} style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-muted)' }}>
+                  <td colSpan={6} style={{ textAlign: 'center', padding: '2.5rem', color: 'var(--color-dark-brown-muted)' }}>
                     Belum ada data pesanan masuk.
                   </td>
                 </tr>
