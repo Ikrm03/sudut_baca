@@ -84,18 +84,6 @@ const AboutPage = () => {
                   </p>
                 </div>
               </div>
-
-              <div style={{ display: 'flex', gap: '1.1rem', alignItems: 'flex-start' }}>
-                <div style={{ padding: '0.7rem', backgroundColor: 'var(--color-forest-green-light)', borderRadius: 'var(--radius-md)' }}>
-                  <Award size={22} color="var(--color-forest-green)" />
-                </div>
-                <div>
-                  <h4 style={{ fontWeight: 700, color: 'var(--color-dark-brown)', marginBottom: '0.25rem' }}>Standar BNSP Junior Web Developer</h4>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--color-dark-brown-muted)', lineHeight: '1.5' }}>
-                    Dibangun sesuai 6 unit kompetensi baku dengan arsitektur bersih, teruji, dan terdokumentasi.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

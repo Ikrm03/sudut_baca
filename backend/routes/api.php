@@ -10,16 +10,15 @@ use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| API Routes - BookSpace Bookstore
-|--------------------------------------------------------------------------
-| Seluruh rute API untuk aplikasi BookSpace.
-| Menggunakan JSON responses dan proteksi Laravel Sanctum.
+ API Routes - BookSpace Bookstore
+
+ Seluruh rute API untuk aplikasi BookSpace.
+ Menggunakan JSON responses dan proteksi Laravel Sanctum.
 */
 
-// ==========================================
+
 // 1. PUBLIC ROUTES (Dapat diakses siapa saja)
-// ==========================================
+
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -33,9 +32,9 @@ Route::get('/books/{id}', [BookController::class, 'show']);
 Route::post('/contact', [ContactController::class, 'send']);
 
 
-// ==============================================================
+
 // 2. AUTHENTICATED ROUTES (Perlu login / Bearer Token Sanctum)
-// ==============================================================
+
 Route::middleware('auth:sanctum')->group(function () {
 
     // Auth & Profil
@@ -53,11 +52,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/orders', [OrderController::class, 'userOrders']);
     Route::get('/orders/{id}', [OrderController::class, 'show']);
 
-    // ==============================================================
+
     // 3. ADMIN ONLY ROUTES (Dilindungi Middleware 'role:admin')
-    // ==============================================================
+
     Route::middleware('role:admin')->prefix('admin')->group(function () {
-        
+
         // Statistik & Manajemen Pengguna
         Route::get('/stats', [AdminDashboardController::class, 'stats']);
         Route::get('/users', [AdminDashboardController::class, 'users']);

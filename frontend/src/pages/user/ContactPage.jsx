@@ -101,7 +101,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--color-dark-brown-muted)' }}>WhatsApp Layanan</div>
-                  <div style={{ fontWeight: 700, color: 'var(--color-dark-brown)' }}>+62 812-3456-7890</div>
+                  <div style={{ fontWeight: 700, color: 'var(--color-dark-brown)' }}>+62 858-9445-5554</div>
                 </div>
               </div>
 

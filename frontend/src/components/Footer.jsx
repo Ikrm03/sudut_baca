@@ -62,10 +62,10 @@ const Footer = () => {
           {/* Kolom 4: Sertifikasi BNSP */}
           <div>
             <h4 style={{ color: 'var(--color-warm-cream)', fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
-              Standar Asesmen
+              Jam Operasional
             </h4>
             <p style={{ fontSize: '0.85rem', color: '#D3E0D6', lineHeight: '1.6' }}>
-              Proyek ini dibangun untuk memenuhi Materi Uji Kompetensi (MUK) <strong>Junior Web Developer</strong> - Badan Nasional Sertifikasi Profesi (BNSP).
+              Senin – Jumat: 08.00 – 17.00 WIB Sabtu: 09.00 – 15.00 WIB Minggu & Hari Libur: Tutup.
             </p>
           </div>
         </div>

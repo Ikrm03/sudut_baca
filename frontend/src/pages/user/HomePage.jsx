@@ -148,7 +148,7 @@ const HomePage = () => {
                     <div>
                       <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-dark-brown)' }}>Kurasi Kategori Lengkap</h4>
                       <p style={{ fontSize: '0.825rem', color: 'var(--color-dark-brown-muted)', lineHeight: '1.5' }}>
-                        Teknologi, bisnis, sains, pengembangan diri, dan karya sastra pilihan.
+                        Novel, komik, pengembangan diri, dan karya sastra pilihan.
                       </p>
                     </div>
                   </div>
