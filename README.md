@@ -50,7 +50,7 @@ Website **SudutBaca** dirancang dengan konsep *Modern Minimalist, Warm, Natural,
 ## 🛠️ Teknologi yang Digunakan
 
 * **Frontend**: ReactJS (Vite), React Router v6, Axios HTTP Client, Lucide React Icons, Palet Styling Warm Green & Cream.
-* **Backend**: PHP 8.2+, Laravel 10 LTS REST API, Laravel Sanctum (Token Auth), Eloquent ORM.
+* **Backend**: PHP 8.2+, Laravel REST API, Laravel Sanctum (Token Auth), Eloquent ORM.
 * **Database**: MySQL (MariaDB) dengan 8 tabel ternormalisasi dan foreign keys.
 * **Arsitektur**: Decoupled Single Page Application (SPA) + RESTful API.
 
@@ -90,7 +90,7 @@ Untuk mempermudah pengujian saat demonstrasi langsung di hadapan asesor, pada ha
 ```
 bookstore/
 │
-├── backend/                       # Source Code Laravel 10 REST API
+├── backend/                       # Source Code Laravel REST API
 │   ├── app/
 │   │   ├── Http/Controllers/      # Logic Controller Modular
 │   │   ├── Http/Middleware/       # CheckRole Middleware
@@ -119,12 +119,3 @@ bookstore/
 └── README.md                      # Panduan ini
 ```
 
----
-
-## 📄 Berkas Dokumentasi Presentasi
-
-* [DOKUMENTASI_TEKNIS_BNSP.md](file:///c:/xampp/htdocs/bookstore/documentation/DOKUMENTASI_TEKNIS_BNSP.md): Berisi latar belakang, kebutuhan fungsional, kamus data, ERD Mermaid, daftar endpoint API, dan potongan kode penting.
-* [PANDUAN_PRESENTASI_SLIDE.md](file:///c:/xampp/htdocs/bookstore/documentation/PANDUAN_PRESENTASI_SLIDE.md): Berisi panduan terperinci menyusun 8 slide presentasi serta daftar 10 titik screenshot yang disarankan.
-
----
-*Didedikasikan untuk memenuhi standar Asesmen Sertifikasi BNSP Junior Web Developer.*
